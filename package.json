@@ -1,7 +1,7 @@
 {
   "name": "unix-socket-credentials",
-  "version": "0.1.0",
-  "description": "Get uid, gid and pid credentials from a unix socket client.",
+  "version": "0.1.1",
+  "description": "Get the uid, gid and pid of a client that connects to your unix socket server",
   "main": "index.js",
   "scripts": {
     "test": "tap test"
