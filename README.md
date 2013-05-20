@@ -18,13 +18,14 @@ Full async example:
 
 ```js
 var uscred = require('unix-socket-credentials');
+var net = require('net');
 
-var s = net.createServer('/tmp/test.sock', function(cli) {
+net.createServer(function(cli) {
     uscred.getCredentials(cli, function(err, res) {
         // You can now use the uid/gid/pid of the client process
         console.log(res.uid, res.gid, res.pid);
     });
-});
+}).listen('/tmp/test.sock');
 ```
 
 
